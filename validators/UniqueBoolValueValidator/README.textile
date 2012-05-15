@@ -1,4 +1,4 @@
-h1. UniqueBoolValValidator
+h1. UniqueBoolValueValidator
  
 h2. General 
 
