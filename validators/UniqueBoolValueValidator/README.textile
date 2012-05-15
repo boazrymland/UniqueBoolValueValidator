@@ -1,0 +1,17 @@
+h1. UniqueBoolValValidator
+ 
+h2. General 
+
+This validator class validates that for the given $object, only a single record in the DB with $attribute_name = $single_bool_value should exists in the DB. Where is it useful? This is best answered in an example: suppose you have polls system and only one 'poll' can be 'published on frontpage'. This property (published on front page) is represented in the DB in the form of some boolean column. Using this validator you can make sure that only one such poll is always "promoted to front page". This validator will not alter the existing poll's 'promoted' field - that's another business logic not handled here.
+ 
+h2. Techy description
+
+Algorithmly speaking, this means that:
+# if $object->$attribute != $single_single_bool_value, then NO validation error is flagged (and no DB check is performed - no need to).
+# if $object->$attribute == $single_single_bool_value, then a check against the DB is made to verify that no other record exists with this value ($single_bool_value).
+ 
+h2. IMPORTANT LIMITATIONS
+
+# Concurrency issues are not handled at all. No locking is done, no isolation levels, nothing.
+# This validator accepts and supports $object of type CActiveRecord ONLY. This is natural since the validator checks stuff in the DB so this is relevant for "DB related CModels", meaning CActiveRecord objects.
+
