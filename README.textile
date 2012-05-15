@@ -1,4 +1,3 @@
-h1. Blah Blah
+h1. README
 
-some text
-* testing textile rendering...
+This is where I put my Yii stuff. Explore the directories here to see each project in its own 'folder'
