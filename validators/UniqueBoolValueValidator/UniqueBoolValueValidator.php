@@ -1,6 +1,6 @@
 <?php
 /**
- * UniqueBoolValValidator.php
+ * UniqueBoolValueValidator.php
  *
  * This validator class validates that for the given $object, only a single record in the DB
  * with $attribute_name = $single_bool_value should exists in the DB. Where is ti useful? This is best
@@ -35,7 +35,7 @@ class UniqueBoolValueValidator extends CValidator {
 	public $enableClientValidation = false;
 
 	/**
-	 * validates $attribute_name in $object.
+	 * validates $attribute in $object.
 	 *
 	 * @param CActiveRecord $object the object to check
 	 * @param string $attribute the attribute name to validate in the given $object.

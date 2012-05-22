@@ -1,3 +1,3 @@
 h1. README
 
-This is where I put my Yii stuff. Explore the directories here to see each project in its own 'folder'
+This is where I put my Yii stuff. Explore the directories here to see each project under its relevant "category"
