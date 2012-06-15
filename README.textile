@@ -37,7 +37,3 @@ return array(
   // other validation rules appear here...
 );
 </pre>
-
-h2. Resources
-
-* "Project page on github":https://github.com/boazrymland/yii-stuff (Its in the "Validators" directory).
