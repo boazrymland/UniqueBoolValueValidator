@@ -1,3 +1,0 @@
-h1. Validators repository
-
-You can find custom validator classes here.
