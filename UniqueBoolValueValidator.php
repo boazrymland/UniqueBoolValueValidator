@@ -60,7 +60,7 @@ class UniqueBoolValueValidator extends CValidator {
 		$counter = $object->countByAttributes(array($attribute => $this->single_bool_value));
 		if (((int)$counter) > 0) {
 			Yii::log("found " . (int)$counter . " records of type " . get_class($object) . " exists with attribute $attribute with value of {$this->single_bool_value}. Therefore validation failed.", CLogger::LEVEL_INFO, __METHOD__);
-			$this->addError($object, $attribute, Yii::t("polls", "There's already a {class_name} with '{attribute}' set to '{unique_bool}'. Please update the other one and try again.", array('{class_name}' => get_class($object), '{attribute}' => $attribute, '{unique_bool}' => $this->single_bool_value)));
+			$this->addError($object, $attribute, Yii::t("application", "There's already a {class_name} with '{attribute}' set to '{unique_bool}'. Please update the other one and try again.", array('{class_name}' => get_class($object), '{attribute}' => $attribute, '{unique_bool}' => $this->single_bool_value)));
 		}
 	}
 }
